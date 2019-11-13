@@ -1,19 +1,19 @@
 import React from 'react';
-import WishlistContainer from './Wishlist.container'
+import GiftContainer from './Gift.container'
 import {
   render,
   fireEvent,
   cleanup,
 } from '@testing-library/react'
 
-describe('A Wishlist', () => {
+describe('A Gift', () => {
   
   let getByTestId
   afterEach(cleanup)
 
   describe('by clicking the Add Gift button', () => {
     beforeEach(()=>{
-      ({ getByTestId } = render(<WishlistContainer/>))
+      ({ getByTestId } = render(<GiftContainer/>))
 
       fireEvent.change(
         getByTestId('gift-name'),

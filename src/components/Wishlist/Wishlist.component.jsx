@@ -1,9 +1,9 @@
 import React from 'react'
+import { render } from '@testing-library/react'
 
-const Wishlist = ({clearValue, giftTitle, handleChange}) => 
-    <div className="card">
-      <input className= "card-header" data-testid = "gift-name" onChange={handleChange} value={giftTitle} />
-      <button className="btn btn-primary" data-testid= "add-gift" onClick={clearValue}>Add Gift</button>
-    </div>
+const Wishlist = () => 
+
+  <div className="div"></div>
+
 
 export default Wishlist

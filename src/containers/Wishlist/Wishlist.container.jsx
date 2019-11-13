@@ -1,23 +1,20 @@
 import React, { Component } from 'react'
-import Wishlist from '../../components/Wishlist/Wishlist.component'
+import GiftContainer from '../Gift/Gift.container'
 
 class WishlistContainer extends Component {
 
   state = {
-    giftTitle: ''
-  }
-  
-  clearValue = () => {
-    this.setState ({
-      giftTitle: ''
-    })
+    gifts: []
   }
 
-  handleChange = event => this.setState({
-    giftTitle: event.target.value
-  })
-
-  render = () => <Wishlist clearValue={this.clearValue} giftTitle={this.state.giftTitle} handleChange={this.handleChange} />
+  addGift = gift => {
+    this.setState(
+      {gifts: [...this.state.gifts, gift] 
+      }
+    )
+  }
+ 
+  render = () => <GiftContainer addGift = {this.addGift} />
 }
 
 export default WishlistContainer
